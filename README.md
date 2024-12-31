@@ -1,9 +1,4 @@
-<style>
-  .heading{
-    color: yellow;
-  }
-</style>
-<h2 class="heading">
+<h2>
   Real Estate Website Front-End Design
 </h2>
 
