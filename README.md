@@ -2,13 +2,9 @@
   Real Estate Website Front-End Design
 </h2>
 
-  <br>
-
 <p>
   This project is a fully functional and well-designed front-end clone of a real estate website. It features a responsive layout that adapts seamlessly to various devices and screen sizes.  
 </p>
-
-  <br>
 
 <h4>Technologies Used</h4>
 <ul>
@@ -20,12 +16,9 @@
   </li>
 </ul>
 
-  <br>
 <h4>
   Purpose
 </h4>
-
-  <br>
 
 <address>
   This website is built solely for front-end training purposes and is intended as a practice clone.
