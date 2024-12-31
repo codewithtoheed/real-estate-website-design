@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" href="Images\mainlogo.jpg">
+    
+    <title>MZS Properties | Terms & Conditions</title>
+
+    <!-- Font Awesome Library -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap">
+
+    <!-- Bootstrap Css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <!-- Custom Css -->
+    <style>
+        * {
+
+            margin: 0%;
+            padding: 0%;
+            box-sizing: border-box;
+            font-family: "Work Sans", sans-serif;
+        }
+
+        body {
+            margin: 0;
+            font-family: "Work Sans", sans-serif;
+        }
+
+        /* NAV STart  */
+        .navbar-brand {
+            margin-left: 15px;
+            margin-top: 0%;
+            padding-top: 0%;
+        }
+
+        .navbar-toggler-icon {
+            color: #001f3f;
+            background-color: #ffffff;
+
+        }
+
+        .navbar-toggler:focus {
+            outline: none;
+        }
+
+        .navbar-nav .nav-link {
+            padding: 8px 15px;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #F68F16;
+            border-radius: 5px;
+            box-shadow: 0 0 5px #F68F16, 0 0 5px #ffffff;
+        }
+
+        .dropdown-menu {
+            background-color: rgba(0, 31, 63, 0.8);
+        }
+
+        .dropdown-item {
+            color: #ffffff;
+        }
+
+        .dropdown-item:hover {
+            background-color: rgba(0, 31, 63, 0.8);
+            color: #F68F16;
+            border-radius: 5px;
+            box-shadow: 0 0 5px #F68F16, 0 0 5px #ffffff !important;
+
+        }
+
+        .navi {
+            position: fixed;
+            width: 100%;
+            z-index: 999;
+            background-color: #001f3f;
+            padding-top: 0%;
+            padding-bottom: 0%;
+
+        }
+
+        .navi::after {
+            content: '';
+            clear: both;
+            display: table;
+
+        }
+
+        .header {
+            position: relative;
+        }
+
+        .logoimg {
+            position: relative;
+            left: 1%;
+            height: 70px;
+            width: 70px;
+        }
+
+        .navi .ul {
+            /* float: right; */
+            list-style-type: none;
+            margin-right: 0px;
+            margin-bottom: 5px;
+            position: relative;
+
+
+        }
+
+        .navi .ul .li {
+            /* float: left; */
+            display: inline-block;
+            background-color: rgba(0, 31, 63, 0.8);
+            margin: 5px 5px;
+        }
+
+        .navi .ul .li a {
+            color: #ffffff;
+            text-decoration: none;
+            line-height: 18px;
+            font-size: 18px;
+            padding: 8px 15px;
+
+        }
+
+        .navi .ul .li a:hover {
+            color: #F68F16;
+            border-radius: 5px;
+            box-shadow: 0 0 5px #F68F16, #ffffff 0 0 5px;
+
+        }
+
+        .navi .ul .ul .li a:hover {
+            color: #F68F16;
+            box-shadow: 0 0 5px #F68F16, 0 0 5px #ffffff;
+        }
+
+        .dropdown .dropdown-menu {
+            position: absolute;
+            border-top: 3px solid #F68F16;
+            border-bottom: 3px solid #F68F16;
+            top: 55px;
+
+
+            transition: top .5s;
+            margin: 0%;
+            padding: 0%;
+
+        }
+
+        .navbar-toggler-icon {
+            display: block;
+            width: 45px;
+            height: 30px;
+            padding: 5px;
+            background-color: #001f3f;
+            border: none;
+            cursor: pointer;
+        }
+
+        .navbar-toggler-icon::before,
+        .navbar-toggler-icon::after {
+            content: '';
+            display: block;
+            width: 34px;
+            height: 3px;
+            background-color: #ffffff;
+            border-radius: 5px;
+
+        }
+
+        .navbar-toggler-icon::before {
+            margin-bottom: 5px;
+
+        }
+
+        .navbar-toggler-icon::after {
+            margin-top: 10px;
+
+        }
+
+        .navbar-toggler-icon:hover {
+            border-color: #F68F16;
+        }
+
+        .navbar {
+            z-index: 1000;
+
+        }
+
+        /* Nav Bar End */
+
+        /* terms and conditions start */
+        .terms {
+            position: relative;
+            top: 80px;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .terms .subterm {
+            margin: auto;
+            width: 100%;
+        }
+
+        .terms h1 {
+            color: rgb(0, 17, 74);
+            font-weight: 500;
+            margin-top: 20px;
+        }
+
+        .terms h2 {
+            color: rgb(0, 17, 74);
+            font-weight: 500;
+
+        }
+
+        .terms p {
+            color: rgb(76, 80, 91);
+            font-weight: 300;
+        }
+
+        /* terms and conditions end */
+
+
+        /* Newsletter section start */
+        .newsletter {
+            height: 40vh;
+            background-color: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 25px 0 35px 0;
+            margin-top: 80px;
+        }
+
+        .newsletter h2 {
+            margin-top: 12px;
+            font-size: 28px;
+            font-weight: 500;
+            color: #001f3f;
+            text-align: left;
+            width: 100%;
+            text-align: left;
+
+        }
+
+        .newsletter .name {
+            height: 40px;
+            width: 100%;
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #ffffff;
+            border: 1px solid #E3E5ED;
+            border-radius: 5px;
+
+
+        }
+
+        .newsletter .email {
+            height: 40px;
+            width: 100%;
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #ffffff;
+            border: 1px solid #E3E5ED;
+            border-radius: 5px;
+
+
+        }
+
+        .newsletter .signupbtn {
+            width: 80%;
+            height: 40px;
+            margin-top: 10px;
+            background-color: #F68F16;
+            border: none;
+            border-radius: 5px;
+            color: #ffffff;
+
+
+        }
+
+        .name:hover {
+            border: 2px solid black;
+        }
+
+        .email:hover {
+            border: 2px solid black;
+        }
+
+        .signupbtn:hover {
+            background-color: #B2B5BF;
+            transition: .3s ease;
+        }
+
+        #newsletterThankYouAlert {
+            display: none;
+            position: fixed;
+
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+
+        }
+
+        #newsletterThankYouAlert p {
+            text-align: center;
+            padding: 20px;
+            color: #F68F16;
+            font-size: 28px;
+            font-weight: 500;
+            background-color: #ffffff;
+            width: 100%;
+
+        }
+
+        /* NEWSLETTER SECTION END */
+ /* Footer Start */
+ .footer {
+            background-color: #001f3f;
+            position: relative;
+
+        }
+
+        .footer::before {
+            content: '';
+            position: absolute;
+            left: 0%;
+            top: 100px;
+            height: 1px;
+            width: 100%;
+            color: #F68F16;
+        }
+
+        .footer ul {
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            padding-left: 0%;
+
+        }
+
+        .footer ul li {
+            list-style-type: none;
+
+            height: 40px;
+            width: 40px;
+            border-radius: 50%;
+            text-align: center;
+            text-decoration: none;
+            line-height: 40px;
+            cursor: pointer;
+            color: #ffffff;
+            background-color: #F68F16;
+            margin-top: 10px;
+
+        }
+
+        .footer ul li a {
+            text-decoration: none;
+            color: #ffffff;
+        }
+
+        .footer ul .li1:hover {
+            background-color: #4246b2;
+            color: #ffffff;
+            box-shadow: 0 0 15px #F68F16;
+            text-shadow: 0 0 15px #ffffff;
+            transition: .3s;
+
+        }
+
+        .footer ul .li2:hover {
+            background-color: #e1306c;
+            color: #ffffff;
+            box-shadow: 0 0 15px #F68F16;
+            text-shadow: 0 0 15px #ffffff;
+            transition: .3s;
+
+        }
+
+        .footer ul .li3:hover {
+            background-color: #262626;
+            color: #ffffff;
+            box-shadow: 0 0 15px #F68F16;
+            text-shadow: 0 0 15px #ffffff;
+            transition: .3s;
+
+        }
+
+        .footer ul .li4:hover {
+            background-color: #ff0000;
+            color: #ffffff;
+            box-shadow: 0 0 15px #F68F16;
+            text-shadow: 0 0 15px #ffffff;
+            transition: .3s;
+
+        }
+
+        .footer ol {
+            color: #ffffff;
+            padding: 0%;
+            margin-bottom: 20px;
+        }
+
+        .footer p {
+            color: #F68F16;
+            font-size: 20px;
+            font-weight: 500;
+            text-align: center;
+            margin-top: 30px;
+
+        }
+
+        .footer ol li {
+            list-style-type: none;
+            margin: 10px 0 10px 0;
+            text-align: center;
+            font-size: 16px;
+            font-weight: 400;
+            cursor: pointer;
+
+            padding: 0%;
+        }
+
+        .footer ol li a {
+            text-decoration: none;
+            color: #ffffff;
+        }
+
+        .footer ol li a:hover {
+            color: #65BAF3;
+            transition: .3s;
+
+        }
+
+        .footer ol li:hover {
+            color: #65BAF3;
+            transition: .3s;
+        }
+
+        .footer h1 img {
+            margin-right: 15px;
+            height: 80px;
+            width: 80px;
+        }
+
+        .footer h1 {
+            color: #F68F16;
+            font-size: 30px;
+            font-weight: 700;
+            text-align: left;
+            padding: 1% 1% 1% 3%;
+            margin-top: 30px;
+        }
+
+        .footer .term li {
+            text-align: left;
+            list-style-type: none;
+            margin: 10px 0 10px 0;
+
+            font-size: 16px;
+            font-weight: 400;
+            cursor: pointer;
+
+            padding: 1% 0.5% 0 4%;
+        }
+
+        .footer .company {
+            margin-top: 50px;
+
+        }
+
+        .footer .company li {
+
+            text-align: right;
+            padding: 1% 12% 0 0;
+            cursor: text;
+        }
+
+        .footer .company li:hover {
+            color: #ffffff;
+        }
+
+        .footer .mzs {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 60px;
+            font-size: 20px;
+            font-weight: 500;
+            font-family: "Work Sans", sans-serif;
+            color: #ffffff;
+            border-top: 1px solid #F68F16;
+            background-color: #001f3f;
+        }
+
+        /* Footert End */
+    </style>
+
+</head>
+
+<body>
+
+
+    <header class="header">
+
+       
+        <!-- NAV BAR START -->
+
+        <nav class="navbar navbar-expand-lg navi">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#"><img class="logoimg" src="Images\mainlogo.jpg" alt="logo"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+
+                </button>
+
+                <div class="collapse navbar-collapse " id="navbarSupportedContent">
+
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 ul">
+                        <li class="nav-item li">
+                            <a class="nav-link " href="buy.html">Buy</a>
+                        </li>
+                        <li class="nav-item li">
+                            <a class="nav-link" href="rent.html">Rent</a>
+                        </li>
+                        <li class="nav-item li">
+                            <a class="nav-link" href="sell.html">Sell</a>
+                        </li>
+                        <li class="nav-item dropdown li">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Areas
+                            </a>
+                            <ul class="dropdown-menu ul">
+                                <li><a class="dropdown-item" href="propertydetails.html">DownTown Dubai</a></li>
+                                <li><a class="dropdown-item" href="propertydetails.html">Palm Jumeirah</a></li>
+                                <li><a class="dropdown-item" href="propertydetails.html">Bluewaters</a></li>
+                                <li><a class="dropdown-item" href="propertydetails.html">Business Bay</a></li>
+                                <li><a class="dropdown-item" href="propertydetails.html">Dubai Marina</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown li">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Projects
+                            </a>
+                            <ul class="dropdown-menu ul">
+                                <li><a class="dropdown-item" href="propertydetails.html">Apartments</a></li>
+                                <li><a class="dropdown-item" href="propertydetails.html">Townhouses</a></li>
+                                <li><a class="dropdown-item" href="propertydetails.html">Penthouses</a></li>
+                                <li><a class="dropdown-item" href="propertydetails.html">Villas</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown li">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Commercial
+                            </a>
+                            <ul class="dropdown-menu ul">
+                                <li><a class="dropdown-item" href="propertydetails.html">Commercial for sale in Dubai</a></li>
+                                <li><a class="dropdown-item" href="propertydetails.html">Commercial for rent in Dubai</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item li">
+                            <a class="nav-link" href="contactus.html">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- NAV BAR END -->
+    </header>
+
+    <!-- TERM & CONDITIONS SECTION START -->
+
+    <section class="terms">
+        <div class="subterm">
+            <div class="container">
+                <div class="row">
+                    <div class="col col-lg-12 col-md-12 col-sm-12 col-12">
+                        <h1>Terms and Conditions</h1>
+                        <p>Welcome to MZS Properties. By accessing this website, you agree to comply with and be bound
+                            by
+                            the following terms and conditions:</p>
+                        <h2>1. Use of Website</h2>
+                        <p>Your use of this website is subject to the following terms:</p>
+                        <ul>
+                            <li>The content of the pages of this website is for your general information and use only.
+                                It is
+                                subject to change without notice.</li>
+                            <li>This website uses cookies to monitor browsing preferences.</li>
+                        </ul>
+                        <h2>2. Intellectual Property Rights</h2>
+                        <p>All trademarks reproduced in this website, which are not the property of, or licensed to the
+                            operator, are acknowledged on the website.</p>
+                        <h2>3. Limitation of Liability</h2>
+                        <p>Your use of any information or materials on this website is entirely at your own risk.</p>
+                        <h2>4. Privacy Policy</h2>
+                        <p>Our Privacy Policy governs your visit to MZS Properties. Please review our Privacy Policy to
+                            understand our practices.</p>
+                        <h2>5. Governing Law</h2>
+                        <p>These terms and conditions are governed by and construed in accordance with the laws of [Your
+                            Country/State], and any disputes relating to these terms and conditions will be subject to
+                            the
+                            exclusive jurisdiction of the courts of [Your Country/State].</p>
+                        <p>If you have any questions regarding these terms and conditions, please contact us.</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- TERM & CONDITIONS SECTION END -->
+
+
+    <!-- NEWSLETTER SECTION START -->
+    <section class="newsletter">
+        <div class="container-fluid">
+            <form id="newsletterForm">
+                <div class="row newsrow">
+                    <div class="col col-lg-4 col-md-4 col-sm-12 col-12">
+                        <h2>Subscribe for newsletter</h2>
+                    </div>
+                    <div class="col col-lg-3 col-md-3 col-sm-12 col-12">
+                        <input class="name" type="text" placeholder="Enter your full name" name="name" required>
+                        <div class="invalid-feedback">Please enter your full name.</div>
+                    </div>
+                    <div class="col col-lg-3 col-md-3 col-sm-12 col-12">
+                        <input class="email" type="email" placeholder="Enter your email" name="email" required>
+                        <div class="invalid-feedback">Please enter a valid email address.</div>
+                    </div>
+                    <div class="col col-md-2 col-lg-2 col-sm-6 col-6">
+                        <button class="signupbtn" type="submit">Subscribe</button>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+        <!-- thank you message start -->
+        <div id="newsletterThankYouAlert" style="display: none;">
+            <p>Thank you for subscribing to our newsletter!</p>
+        </div>
+        <!-- thank you message End -->
+
+    </section>
+    <!-- NEWSLETTER SECTION END -->
+
+      <!-- Footer start -->
+      <section class="footer">
+        <div class="container-fluid">
+            <div class="row ">
+                <div class="col col-lg-3 col-md-3 col-sm-6 col-6">
+                    <p>Properties for Sale in Dubai</p>
+                    <ol>
+                        <li><a>Apartments for sale</a></li>
+                        <li><a>Townhouses for sale</a></li>
+                        <li><a>Penthouses for sale</a></li>
+                        <li><a>Villas for sale</a></li>
+
+                    </ol>
+
+                </div>
+
+                <div class="col col-lg-3 col-md-3 col-sm-6 col-6">
+                    <p>Properties for Rent in Dubai</p>
+                    <ol>
+                        <li><a>Apartments for rent</a></li>
+                        <li><a>Townhouses for rent</a></li>
+                        <li><a>Penthouses for rent</a></li>
+                        <li><a>Villas for rent</a></li>
+                    </ol>
+                </div>
+                <div class="col col-lg-2 col-md-2 col-sm-6 col-6 ">
+                    <p> Sell </p>
+                    <ol>
+                        <li><a>Sell your property</a></li>
+                        <li><a>Seller's Guide</a></li>
+
+
+                    </ol>
+                </div>
+                <div class="col col-md-4 col-sm-6 col-xs-6 col-6">
+                    <p>Follow Us</p>
+                    <ul>
+                        <li class="li1"><a href="https://www.facebook.com/SubhanMZS?mibextid=ZbWKwL" target="_blank"><i
+                                    class="fab fa-facebook-f"></i></a></li>
+                        <li class="li2"><a href="https://www.instagram.com/itx_subhan_3428?igsh=MWowNTA3eGkxaG5mMA=="
+                                target="_blank"><i class="fab fa-instagram"></i></a></li>
+                        <li class="li3"><a href="https://www.tiktok.com/@itx_subhan_3428?_t=8kFjsdTKlWr&_r=1"
+                                target="_blank"><i class="fab fa-tiktok"></i></a></li>
+                        <li class="li4"><a href="https://youtube.com/@subhanprops?si=L_4xsvAVDJ6b7AIi"
+                                target="_blank"><i class="fab fa-youtube"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+
+
+
+            <div class="row ">
+                <div class=" col col-md-6 col-lg-6 col-sm-6 col-6">
+                    <h1>MZS Properties</h1>
+
+                    <div class="term">
+                        <ol>
+                            <li class="Privacy"><a href="contactus.html" target="_blank">Contact Us</a></li>
+                            <li class="Privacy"><a href="aboutus.html" target="_blank">About Us</a></li>
+                            <li class="Privacy"><a href="privacypolicy.html" target="_blank">Privacy Policy</a> </li>
+                            <li class="Privacy"><a href="terms&conditon.html">Terms & Conditions</a></li>
+
+
+                        </ol>
+                    </div>
+                </div>
+                <div class="col col-md-6 col-lg-6 col-sm-6 col-6">
+                    <div class="company">
+                        <ol>
+                            <li><i class="fas fa-mobile-alt"></i>
+                                &nbsp; &nbsp; +92 (317) - 7294496
+                            </li>
+                            <li>Opening Hours:</li>
+
+                            <li> Monday - Friday</li>
+
+                            <li> 9:30 AM - 18:30 PM (GMT +4)</li>
+
+                            <li> Saturday & Sunday - Closed</li>
+                        </ol>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="mzs">&copy; 2024 MZS Properties. All rights reserved</div>
+    </section>
+
+    <!-- Footer End  -->
+
+    <!-- Bootstrap JS -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
+    <!-- Custom Jquery -->
+    <script src="jquery-3.7.1.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $("#newsletterForm").submit(function (event) {
+                event.preventDefault();
+
+
+                if (this.checkValidity()) {
+
+                    $("#newsletterThankYouAlert").fadeIn();
+
+
+                    setTimeout(function () {
+                        $("#newsletterThankYouAlert").fadeOut();
+                    }, 8000);
+
+
+                    $(this)[0].reset();
+                } else {
+
+                    $(this).find(':invalid').first().focus().addClass('is-invalid');
+                }
+            });
+
+
+            $("#newsletterForm input").focus(function () {
+                $(this).removeClass('is-invalid');
+            });
+        });
+    </script>
+</body>
+
+</html>

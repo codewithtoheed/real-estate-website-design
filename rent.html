@@ -1,0 +1,1394 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" href="Images\mainlogo.jpg">
+    
+    <title>MZS Properties | Rent page</title>
+
+
+    <!-- Font Awesome Library -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap">
+
+    <!-- Bootstrap Css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <!-- Custom Css -->
+    <style>
+        * {
+
+            margin: 0%;
+            padding: 0%;
+            box-sizing: border-box;
+            font-family: "Work Sans", sans-serif;
+        }
+
+        body {
+            margin: 0;
+            font-family: "Work Sans", sans-serif;
+        }
+
+        /* NAV STart  */
+        .navbar-brand {
+            margin-left: 15px;
+        }
+
+        .navbar-toggler-icon {
+            color: #001f3f;
+            background-color: #ffffff;
+
+        }
+
+        .navbar-toggler:focus {
+            outline: none;
+        }
+
+        .navbar-nav .nav-link {
+            padding: 8px 15px;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #F68F16;
+            border-radius: 5px;
+            box-shadow: 0 0 5px #F68F16, 0 0 5px #ffffff;
+        }
+
+        .dropdown-menu {
+            background-color: rgba(0, 31, 63, 0.8);
+        }
+
+        .dropdown-item {
+            color: #ffffff;
+        }
+
+        .dropdown-item:hover {
+            background-color: rgba(0, 31, 63, 0.8);
+            color: #F68F16;
+            border-radius: 5px;
+            box-shadow: 0 0 5px #F68F16, 0 0 5px #ffffff !important;
+
+        }
+
+        .navi {
+            position: fixed;
+            width: 100%;
+            z-index: 999;
+            background-color: #001f3f;
+            padding-top: 0%;
+            padding-bottom: 0%;
+
+        }
+
+        .navi::after {
+            content: '';
+            clear: both;
+            display: table;
+
+        }
+
+        .header {
+            position: relative;
+        }
+
+        .logoimg {
+            position: relative;
+            left: 1%;
+            height: 70px;
+            width: 70px;
+        }
+
+        .navi .ul {
+            /* float: right; */
+            list-style-type: none;
+            margin-right: 0px;
+            margin-bottom: 5px;
+            position: relative;
+
+
+        }
+
+        .navi .ul .li {
+            /* float: left; */
+            display: inline-block;
+            background-color: rgba(0, 31, 63, 0.8);
+            margin: 5px 5px;
+        }
+
+        .navi .ul .li a {
+            color: #ffffff;
+            text-decoration: none;
+            line-height: 18px;
+            font-size: 18px;
+            padding: 8px 15px;
+
+        }
+
+        .navi .ul .li a:hover {
+            color: #F68F16;
+            border-radius: 5px;
+            box-shadow: 0 0 5px #F68F16, #ffffff 0 0 5px;
+
+        }
+
+        .navi .ul .ul .li a:hover {
+            color: #F68F16;
+            box-shadow: 0 0 5px #F68F16, 0 0 5px #ffffff;
+        }
+
+        .dropdown .dropdown-menu {
+            position: absolute;
+            border-top: 3px solid #F68F16;
+            border-bottom: 3px solid #F68F16;
+            top: 55px;
+            transition: top .5s;
+            margin: 0%;
+            padding: 0%;
+
+        }
+
+        .dropdown .dropdown-menu:hover {
+            visibility: visible;
+
+
+        }
+
+        .navbar-toggler-icon {
+            display: block;
+            width: 45px;
+            height: 30px;
+            padding: 5px;
+            background-color: #001f3f;
+            border: none;
+            cursor: pointer;
+        }
+
+        .navbar-toggler-icon::before,
+        .navbar-toggler-icon::after {
+            content: '';
+            display: block;
+            width: 34px;
+            height: 3px;
+            background-color: #ffffff;
+            border-radius: 5px;
+
+        }
+
+        .navbar-toggler-icon::before {
+            margin-bottom: 5px;
+
+        }
+
+        .navbar-toggler-icon::after {
+            margin-top: 10px;
+
+        }
+
+        .navbar-toggler-icon:hover {
+            border-color: #F68F16;
+        }
+
+        */ .navbar {
+            z-index: 1000;
+
+        }
+
+        /* Nav BAr End */
+
+        /* Background Image Start */
+        .backimg {
+            height: 100vh;
+            width: 100%;
+            position: relative;
+            overflow: hidden;
+
+
+        }
+
+        .backimg .imgg {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            filter: brightness(60%);
+
+        }
+
+        /* Background Image End */
+
+        /* Background text start */
+        .backtext {
+            position: absolute;
+            top: 35vh;
+        }
+
+        .backtext .backheading {
+            width: 100%;
+            padding-right: 0%;
+        }
+
+        .backtext .backheading p {
+            z-index: 999;
+            font-size: 3rem;
+            line-height: 3rem;
+            font-weight: 400;
+            color: rgb(255, 255, 255);
+            background: transparent;
+            width: 100vw;
+            text-align: center;
+
+        }
+
+        .backtext .backcontant {
+            width: 100vw;
+            padding-left: 17px;
+            padding-right: 20px;
+            margin-top: 20px;
+
+        }
+
+        .backtext .backcontant span {
+            color: #ffffff;
+            text-align: center;
+
+            display: block;
+            font-size: 18px;
+            font-weight: 400;
+
+        }
+
+        /* Background text End */
+
+      
+          /* properties for rent section start */
+          .cardi {
+            margin: 10px 0 0 0;
+            position: relative;
+        }
+
+        .containeri {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            padding: 60px 50px;
+            gap: 50px;
+
+
+        }
+
+        .cardi #text {
+
+            margin-top: 50px;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 32px;
+            font-weight: 500;
+            color: rgb(0, 17, 74);
+        }
+
+        .cardi .saletext {
+            margin-top: 20px;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            font-size: 20px;
+            font-weight: 400;
+            color: #65BAF3;
+            margin-bottom: 0%;
+
+        }
+
+        .cardi .saletext p:hover {
+            color: #F68F16;
+            text-decoration: underline;
+        }
+
+        .containeri .card {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 300px;
+            height: 300px;
+            background: #ffffff;
+            border-radius: 20px;
+
+            transition: .5s;
+            box-shadow: 0 2px 10px 2px #001f3f;
+
+
+        }
+
+        .containeri .card:hover {
+            height: 350px;
+            box-shadow: 0 20px 60px #001f3f;
+        }
+
+        .containeri .imgbx {
+            position: absolute;
+            top: 15px;
+            overflow: hidden;
+            cursor: pointer;
+            width: 280px;
+            height: 180px;
+            background: #001f3f;
+            border-radius: 12px;
+            transition: .5s;
+        }
+
+        .containeri .card:hover .imgbx {
+            top: -80px;
+            scale: 0.60;
+            box-shadow: 0 15px 45px rgb(0 0 0 .2);
+        }
+
+        .containeri .card .imgbx img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .containeri .card .content {
+            position: absolute;
+            width: 100%;
+            padding: 0 30px;
+            text-align: center;
+            top: 225px;
+            height: 60px;
+            overflow: hidden;
+            transition: .5s;
+
+        }
+
+        .containeri .card:hover .content {
+            top: 100px;
+            height: 320px;
+
+        }
+
+        .containeri .card .content h3 {
+            font-size: 25px;
+            font-weight: 500;
+            color: #001f3f;
+            cursor: pointer;
+
+        }
+
+        .containeri .card .content span {
+            font-size: 20px;
+            font-weight: 500;
+            color: #F68F16;
+        }
+
+        .containeri .card .content a {
+            text-decoration: none;
+            color: #001f3f;
+        }
+
+
+        /* Properties for rent section end */
+
+        /* Expert Advice, Reliable partner , good expousure start */
+
+        .aboutsection {
+            margin-top: 30px;
+        }
+
+        .aboutimg {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .aboutimgdiv {
+            padding: 0;
+            height: 100vh;
+        }
+
+        .abouttextdiv {
+            /* padding: 0; */
+            background-color: #E1F2FD;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .aboutustext {
+            text-align: center;
+            display: inline-table;
+            padding: 20px;
+        }
+
+        .aboutustext h2 {
+            color: rgb(0, 17, 74);
+            font-size: 40px;
+            text-align: center;
+            font-weight: 500;
+            margin-top: 20px;
+        }
+
+        .aboutustext p {
+            margin-top: 30px;
+            font-size: 18px;
+            text-align: center;
+            font-weight: 400;
+            color: rgb(76, 80, 91);
+        }
+
+        .aboutustext span {
+            color: #F68F16;
+            font-size: 18px;
+            font-weight: 500;
+        }
+
+        .aboutbtnul {
+            margin: 0;
+            padding: 0;
+        }
+
+        .aboutbtnli {
+            list-style-type: none;
+        }
+
+        .aboutbtn {
+            padding: 10px;
+            font-size: 16px;
+            width: 150px;
+            border-radius: 5px;
+            border: none;
+            background-color: #F68F16;
+            color: #ffffff;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .aboutbtn:hover {
+            background-color: #B2B5BF;
+            transition: .3s ease;
+            color: #ffffff;
+        }
+
+        #Reliable_partner {
+            margin-top: 0%;
+            border-top: 2px solid #001f3f;
+        }
+
+        #Good_exposure {
+            margin-top: 0%;
+        }
+
+        /* Expert Advice, Reliable partner , good expousure End */
+
+
+        /* Text Section */
+        .texti {
+            text-align: center;
+            background-color: #ffffff;
+        }
+
+        .texti h1 {
+            color: #001f3f;
+            font-size: 72px;
+            font-weight: 600;
+        }
+
+        .texti p {
+            font-size: 18px;
+            font-weight: 400;
+            color: rgb(76, 80, 91);
+        }
+
+        .textsection {
+            margin-top: 100px;
+            margin-bottom: 100px;
+
+
+        }
+
+        /* TEXT SECTION END */
+
+        /* READY SECTION START */
+
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .ready {
+            height: 70vh;
+            background-color: #001f3f;
+            color: #ffffff;
+        }
+
+        .readycnt {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+        }
+
+        .ready h1 {
+            font-size: 40px;
+            font-weight: 500;
+            color: rgb(225, 225, 225);
+            padding: 30px;
+            /* Adjust padding as needed */
+            text-align: center;
+            margin-bottom: 0px;
+            /* Add some space between text and buttons */
+        }
+
+        .ready .btn1 {
+            font-size: 16px;
+            font-weight: 400;
+            color: #ffffff;
+            background-color: #F68F16;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            width: 150px;
+            margin-right: 20px;
+            margin-bottom: 20px;
+        }
+
+        .ready .btn2 {
+            font-size: 16px;
+            font-weight: 400;
+            color: #ffffff;
+            background-color: #65BAF3;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            width: 150px;
+            margin-bottom: 20px;
+        }
+
+        .ready .btn2 a {
+            text-decoration: none;
+            color: #ffffff;
+        }
+
+        .ready .btn2 a:hover {
+            background-color: #B2B5BF;
+        }
+
+        .btn1:hover {
+            background-color: #B2B5BF;
+            transition: .3s ease;
+        }
+
+        .btn2:hover {
+            background-color: #B2B5BF;
+            transition: .3s ease;
+        }
+
+        /* READY SECTION END  */
+
+        /* Newsletter section start */
+        .newsletter {
+            height: 40vh;
+            background-color: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 25px 0 35px 0;
+        }
+
+        .newsletter h2 {
+            margin-top: 10px;
+            font-size: 28px;
+            font-weight: 500;
+            color: #001f3f;
+            text-align: left;
+            width: 100%;
+            text-align: left;
+
+        }
+
+        .newsletter .name {
+            height: 40px;
+            width: 100%;
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #ffffff;
+            border: 1px solid #E3E5ED;
+            border-radius: 5px;
+
+
+        }
+
+        .newsletter .email {
+            height: 40px;
+            width: 100%;
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #ffffff;
+            border: 1px solid #E3E5ED;
+            border-radius: 5px;
+
+
+        }
+
+        .newsletter .signupbtn {
+            width: 80%;
+            height: 40px;
+            margin-top: 10px;
+            background-color: #F68F16;
+            border: none;
+            border-radius: 5px;
+            color: #ffffff;
+
+
+        }
+
+        .name:hover {
+            border: 2px solid black;
+        }
+
+        .email:hover {
+            border: 2px solid black;
+        }
+
+        .signupbtn:hover {
+            background-color: #B2B5BF;
+            transition: .3s ease;
+        }
+
+        #newsletterThankYouAlert {
+            display: none;
+            position: fixed;
+
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+
+        }
+
+        #newsletterThankYouAlert p {
+            text-align: center;
+            padding: 20px;
+            color: #F68F16;
+            font-size: 28px;
+            font-weight: 500;
+            background-color: #ffffff;
+
+            width: 100%;
+
+        }
+
+        /* NEWSLETTER SECTION END */
+
+        /* Footer Start */
+        .footer {
+            background-color: #001f3f;
+            position: relative;
+
+        }
+
+        .footer::before {
+            content: '';
+            position: absolute;
+            left: 0%;
+            top: 100px;
+            height: 1px;
+            width: 100%;
+            color: #F68F16;
+        }
+
+        .footer ul {
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            padding-left: 0%;
+
+        }
+
+        .footer ul li {
+            list-style-type: none;
+
+            height: 40px;
+            width: 40px;
+            border-radius: 50%;
+            text-align: center;
+            text-decoration: none;
+            line-height: 40px;
+            cursor: pointer;
+            color: #ffffff;
+            background-color: #F68F16;
+            margin-top: 10px;
+
+        }
+
+        .footer ul li a {
+            text-decoration: none;
+            color: #ffffff;
+        }
+
+        .footer ul .li1:hover {
+            background-color: #4246b2;
+            color: #ffffff;
+            box-shadow: 0 0 15px #F68F16;
+            text-shadow: 0 0 15px #ffffff;
+            transition: .3s;
+
+        }
+
+        .footer ul .li2:hover {
+            background-color: #e1306c;
+            color: #ffffff;
+            box-shadow: 0 0 15px #F68F16;
+            text-shadow: 0 0 15px #ffffff;
+            transition: .3s;
+
+        }
+
+        .footer ul .li3:hover {
+            background-color: #262626;
+            color: #ffffff;
+            box-shadow: 0 0 15px #F68F16;
+            text-shadow: 0 0 15px #ffffff;
+            transition: .3s;
+
+        }
+
+        .footer ul .li4:hover {
+            background-color: #ff0000;
+            color: #ffffff;
+            box-shadow: 0 0 15px #F68F16;
+            text-shadow: 0 0 15px #ffffff;
+            transition: .3s;
+
+        }
+
+        .footer ol {
+            color: #ffffff;
+            padding: 0%;
+            margin-bottom: 20px;
+        }
+
+        .footer p {
+            color: #F68F16;
+            font-size: 20px;
+            font-weight: 500;
+            text-align: center;
+            margin-top: 30px;
+
+        }
+
+        .footer ol li {
+            list-style-type: none;
+            margin: 10px 0 10px 0;
+            text-align: center;
+            font-size: 16px;
+            font-weight: 400;
+            cursor: pointer;
+
+            padding: 0%;
+        }
+
+        .footer ol li a {
+            text-decoration: none;
+            color: #ffffff;
+        }
+
+        .footer ol li a:hover {
+            color: #65BAF3;
+            transition: .3s;
+
+        }
+
+        .footer ol li:hover {
+            color: #65BAF3;
+            transition: .3s;
+        }
+
+        .footer h1 img {
+            margin-right: 15px;
+            height: 80px;
+            width: 80px;
+        }
+
+        .footer h1 {
+            color: #F68F16;
+            font-size: 30px;
+            font-weight: 700;
+            text-align: left;
+            padding: 1% 1% 1% 3%;
+            margin-top: 30px;
+        }
+
+        .footer .term li {
+            text-align: left;
+            list-style-type: none;
+            margin: 10px 0 10px 0;
+
+            font-size: 16px;
+            font-weight: 400;
+            cursor: pointer;
+
+            padding: 1% 0.5% 0 4%;
+        }
+
+        .footer .company {
+            margin-top: 50px;
+
+        }
+
+        .footer .company li {
+
+            text-align: right;
+            padding: 1% 12% 0 0;
+            cursor: text;
+        }
+
+        .footer .company li:hover {
+            color: #ffffff;
+        }
+
+        .footer .mzs {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 60px;
+            font-size: 20px;
+            font-weight: 500;
+            font-family: "Work Sans", sans-serif;
+            color: #ffffff;
+            border-top: 1px solid #F68F16;
+            background-color: #001f3f;
+        }
+
+        /* Footert End */
+    </style>
+</head>
+
+<body>
+
+
+    <header class="header">
+
+        <!-- NAV BAR START -->
+
+        <nav class="navbar navbar-expand-lg navi">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#"><img class="logoimg" src="Images\mainlogo.jpg" alt="logo"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+
+                </button>
+
+                <div class="collapse navbar-collapse " id="navbarSupportedContent">
+
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 ul">
+                        <li class="nav-item li">
+                            <a class="nav-link " href="buy.html">Buy</a>
+                        </li>
+                        <li class="nav-item li">
+                            <a class="nav-link" href="rent.html">Rent</a>
+                        </li>
+                        <li class="nav-item li">
+                            <a class="nav-link" href="sell.html">Sell</a>
+                        </li>
+                        <li class="nav-item dropdown li">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Areas
+                            </a>
+                            <ul class="dropdown-menu ul">
+                                <li><a class="dropdown-item" href="propertydetails.html">DownTown Dubai</a></li>
+                                <li><a class="dropdown-item" href="propertydetails.html">Palm Jumeirah</a></li>
+                                <li><a class="dropdown-item" href="propertydetails.html">Bluewaters</a></li>
+                                <li><a class="dropdown-item" href="propertydetails.html">Business Bay</a></li>
+                                <li><a class="dropdown-item" href="propertydetails.html">Dubai Marina</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown li">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Projects
+                            </a>
+                            <ul class="dropdown-menu ul">
+                                <li><a class="dropdown-item" href="propertydetails.html">Apartments</a></li>
+                                <li><a class="dropdown-item" href="propertydetails.html">Townhouses</a></li>
+                                <li><a class="dropdown-item" href="propertydetails.html">Penthouses</a></li>
+                                <li><a class="dropdown-item" href="propertydetails.html">Villas</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown li">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Commercial
+                            </a>
+                            <ul class="dropdown-menu ul">
+                                <li><a class="dropdown-item" href="propertydetails.html">Commercial for sale in Dubai</a></li>
+                                <li><a class="dropdown-item" href="propertydetails.html">Commercial for rent in Dubai</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item li">
+                            <a class="nav-link" href="contactus.html">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- NAV BAR END -->
+        <!-- Background Image Start -->
+
+        <div class="backimg">
+            <img class="imgg" src="Images\rentbackground.webp">
+
+
+            <!-- Back Img Text Start -->
+            <section class="backtext">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col col-lg-12 col-md-12 col-sm-12 col-12 backheading">
+                            <p>Rent a property in Dubai</p>
+
+                        </div>
+                        <div class="row">
+                            <div class="col col-lg-12 col-md-12 col-sm-12 col-12 backcontant">
+                                <span>
+                                    MZS's local knowledge and connections mean that we can help tenants find their ideal
+                                    home <br>quickly, and assist landlords in managing their investment flexibly to suit
+                                    their needs better.
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- Back Img Text End -->
+
+        </div>
+        <!-- Background Image End -->
+
+
+    </header>
+
+
+
+    <!-- rent card section start -->
+
+    <section class="cardi">
+
+        <div class="saletext">
+            <p>Properties for rent in dubai</p>
+        </div>
+        <div class="containeri">
+            <div class="card " style="color: #001f3f;">
+                <div class="imgbx">
+                    <a href="propertydetails.html" target="_blank"> <img class="" src="Images\rentcard1.webp"></a>
+                </div>
+                <div class="content">
+                    <h3><a href="propertydetails.html" target="_blank"> Bedroom apartment for Rent</a></h3>
+                    <span>AED 6,000,000</span>
+                    <hr>
+                    <div class="property-details">
+                        <div class="row">
+                            <div class="col col-md-4 col-sm-4 col-4">
+                                <i class="fas fa-bed"></i>&nbsp; 3
+                            </div>
+                            <div class="col col-md-4 col-sm-4 col-4">
+                                <i class=" fas fa-shower"> </i> 4
+                            </div>
+
+                            <div class="col col-md-4 col-sm-4 col-4">
+                                <i class="fas fa-search"></i> 2045
+                            </div>
+                        </div>
+                        <br>
+                        <p><i class="fas fa-map-marker-alt"></i> Apartment Building 7, Bluewaters</p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="card">
+                <div class="imgbx">
+                    <a href="propertydetails.html" target="_blank"><img src="Images\rentcard2.webp"></a>
+                </div>
+                <div class="content">
+                    <h3><a href="propertydetails.html" target="_blank">1 Bedroom villa for Rent</a></h3>
+                    <span>AED 185,000 per year</span>
+                    <hr>
+                    <div class="property-details">
+                        <div class="row">
+                            <div class="col col-md-4 col-sm-4 col-4">
+                                <i class="fas fa-bed"></i>&nbsp; 1
+                            </div>
+                            <div class="col col-md-4 col-sm-4 col-4">
+                                <i class=" fas fa-shower"> </i> 2
+                            </div>
+
+                            <div class="col col-md-4 col-sm-4 col-4">
+                                <i class="fas fa-search"></i> 880
+                            </div>
+                        </div>
+                        <br>
+                        <div class="col-md-12">
+                            <p> <i class="fas fa-map-marker-alt"></i> The Address Dubai Marina, Dubai Marina</p>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="card">
+                <div class="imgbx">
+                    <a href="propertydetails.html" target="_blank"><img src="Images\rentcard3.webp" alt=""></a>
+                </div>
+                <div class="content">
+
+                    <h3><a href="propertydetails.html" target="_blank"> Bedroom apartment for Rent</a></h3>
+                    <span>AED 300,000 per year </span>
+                    <hr>
+                    <div class="property-details">
+                        <div class="row">
+                            <div class="col col-md-4 col-sm-4 col-4">
+                                <i class="fas fa-bed"></i> &nbsp;2
+                            </div>
+                            <div class="col col-md-4 col-sm-4 col-4">
+                                <i class=" fas fa-shower"> </i> 2
+                            </div>
+
+                            <div class="col col-md-4 col-sm-4 col-4">
+                                <i class="fas fa-search"></i> 1333
+                            </div>
+                        </div>
+                        <br>
+                        <div class="col-md-12">
+                            <p> <i class="fas fa-map-marker-alt"></i> The Address Dubai Marina, Dubai Marina</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- rent card section end -->
+
+    <!-- Expert Advice SECTION START-->
+
+    <section class="aboutsection">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-6 aboutimgdiv">
+                    <img src="Images\expertadvicerent.webp" class="img-fluid aboutimg" alt="Image">
+                </div>
+                <div class="col-md-6 abouttextdiv d-flex align-items-center">
+                    <div class="aboutustext text-center">
+                        <h2>Expert Advice </h2>
+                        <p>With inside out knowledge of Dubai and connections with local developers, you can count on
+                            our team of RERA-qualified professionals to find the perfect rental home for you or a
+                            valuable investment to add to your portfolio.</p>
+                        <p>Take a look at our comprehensive guides- <span>Landlord’s Guide, Tenant’s Guide</span> packed
+                            with expert advice from our property professionals to help you make an informed decision.
+
+                            Reliable</p>
+                        <ul class="aboutbtnul">
+                            <li class="aboutbtnli">
+                                <a href="aboutus.html" target="_blank">
+                                    <button class="aboutbtn" type="button" name="contactus">Contact Us</button>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <!-- Expert Advice SECTION END -->
+
+    <!-- Reliable Partner Section Start -->
+
+    <section class="aboutsection" id="Reliable_partner">
+        <div class="container-fluid">
+            <div class="row">
+
+                <div class="col-md-6 abouttextdiv d-flex align-items-center">
+                    <div class="aboutustext text-center">
+                        <h2>Reliable Partner </h2>
+                        <p>We value our clients and their individual property needs. Above all, we understand the
+                            importance of having an open and regular communication channel with you. Find out what our
+                            customers are saying about Dacha.</p>
+
+
+
+                    </div>
+                </div>
+                <div class="col-md-6 aboutimgdiv">
+                    <img src="Images\Reliable_partner_rent.webp" class="img-fluid aboutimg" alt="Image">
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <!-- Reliable Partner Section End -->
+
+    <!-- Good Expousure section start -->
+
+    <section class="aboutsection" id="Good_exposure">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-6 aboutimgdiv">
+                    <img src="Images\Good_exposure_rent.webp" class="img-fluid aboutimg" alt="Image">
+                </div>
+
+                <div class="col-md-6 abouttextdiv d-flex align-items-center">
+                    <div class="aboutustext text-center">
+                        <h2>Good Exposure</h2>
+                        <p>Through our local network and exclusive connections, we have built a strong database to
+                            facilitate fast and quality rentals for our clients for all property types.
+
+                        </p>
+                        <p>Browse our latest rental properties in Dubai or contactone of our real estate agents to
+                            discuss your requirements.
+
+                        </p>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Good Expousure section end -->
+
+    <!-- Text Section -->
+    <section class="textsection">
+        <div class="container ">
+            <div class="row">
+                <div class="col-md-3 col-sm-6 col-xs-6  texti">
+                    <h1>5bn</h1>
+                    <p>Over AED 5 billion of properties sold since inception</p>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-6  texti">
+                    <h1> 800+</h1>
+                    <p> In excess of 800 properties rented annually</p>
+
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-6  texti">
+                    <h1>1+</h1>
+                    <p>1+ successful years in the Dubai real estate market</p>
+
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-6  texti">
+                    <h1>4.8/5</h1>
+                    <p>4.8 average Google Review score</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- TEXT SECTION END -->
+
+    <!-- Ready To GO Section -->
+    <section class="ready">
+        <div class="container readycnt d-flex align-items-center justify-content-center">
+            <div class="row">
+                <div class="col col-md-12 col-lg-12 col-sm-12 col-12 text-center readytext">
+                    <h1>Ready to find your next home with MZS?</h1>
+                    <div>
+                        <button type="button" class="btn1 ">Search</button>
+                        <a href="contactus.html" target="_blank"> <button type="button" class="btn2 ">Contact
+                                Us</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Ready To GO Section end -->
+
+
+
+    <!-- NEWSLETTER SECTION START -->
+    <section class="newsletter">
+        <div class="container-fluid">
+            <form id="newsletterForm">
+                <div class="row newsrow">
+                    <div class="col col-lg-4 col-md-4 col-sm-12 col-12">
+                        <h2>Subscribe for newsletter</h2>
+                    </div>
+                    <div class="col col-lg-3 col-md-3 col-sm-12 col-12">
+                        <input class="name" type="text" placeholder="Enter your full name" name="name" required>
+                        <div class="invalid-feedback">Please enter your full name.</div>
+                    </div>
+                    <div class="col col-lg-3 col-md-3 col-sm-12 col-12">
+                        <input class="email" type="email" placeholder="Enter your email" name="email" required>
+                        <div class="invalid-feedback">Please enter a valid email address.</div>
+                    </div>
+                    <div class="col col-md-2 col-lg-2 col-sm-6 col-6">
+                        <button class="signupbtn" type="submit">Subscribe</button>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+        <!-- thank you message start -->
+        <div id="newsletterThankYouAlert" style="display: none;">
+            <p>Thank you for subscribing to our newsletter!</p>
+        </div>
+        <!-- thank you message End -->
+
+    </section>
+    <!-- NEWSLETTER SECTION END -->
+
+     <!-- Footer start -->
+     <section class="footer">
+        <div class="container-fluid">
+            <div class="row ">
+                <div class="col col-lg-3 col-md-3 col-sm-6 col-6">
+                    <p>Properties for Sale in Dubai</p>
+                    <ol>
+                        <li><a>Apartments for sale</a></li>
+                        <li><a>Townhouses for sale</a></li>
+                        <li><a>Penthouses for sale</a></li>
+                        <li><a>Villas for sale</a></li>
+
+                    </ol>
+
+                </div>
+
+                <div class="col col-lg-3 col-md-3 col-sm-6 col-6">
+                    <p>Properties for Rent in Dubai</p>
+                    <ol>
+                        <li><a>Apartments for rent</a></li>
+                        <li><a>Townhouses for rent</a></li>
+                        <li><a>Penthouses for rent</a></li>
+                        <li><a>Villas for rent</a></li>
+                    </ol>
+                </div>
+                <div class="col col-lg-2 col-md-2 col-sm-6 col-6 ">
+                    <p> Sell </p>
+                    <ol>
+                        <li><a>Sell your property</a></li>
+                        <li><a>Seller's Guide</a></li>
+
+
+                    </ol>
+                </div>
+                <div class="col col-md-4 col-sm-6 col-xs-6 col-6">
+                    <p>Follow Us</p>
+                    <ul>
+                        <li class="li1"><a href="https://www.facebook.com/SubhanMZS?mibextid=ZbWKwL" target="_blank"><i
+                                    class="fab fa-facebook-f"></i></a></li>
+                        <li class="li2"><a href="https://www.instagram.com/itx_subhan_3428?igsh=MWowNTA3eGkxaG5mMA=="
+                                target="_blank"><i class="fab fa-instagram"></i></a></li>
+                        <li class="li3"><a href="https://www.tiktok.com/@itx_subhan_3428?_t=8kFjsdTKlWr&_r=1"
+                                target="_blank"><i class="fab fa-tiktok"></i></a></li>
+                        <li class="li4"><a href="https://youtube.com/@subhanprops?si=L_4xsvAVDJ6b7AIi"
+                                target="_blank"><i class="fab fa-youtube"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+
+
+
+            <div class="row ">
+                <div class=" col col-md-6 col-lg-6 col-sm-6 col-6">
+                    <h1>MZS Properties</h1>
+
+                    <div class="term">
+                        <ol>
+                            <li class="Privacy"><a href="contactus.html" target="_blank">Contact Us</a></li>
+                            <li class="Privacy"><a href="aboutus.html" target="_blank">About Us</a></li>
+                            <li class="Privacy"><a href="privacypolicy.html" target="_blank">Privacy Policy</a> </li>
+                            <li class="Privacy"><a href="terms&conditon.html">Terms & Conditions</a></li>
+
+
+                        </ol>
+                    </div>
+                </div>
+                <div class="col col-md-6 col-lg-6 col-sm-6 col-6">
+                    <div class="company">
+                        <ol>
+                            <li><i class="fas fa-mobile-alt"></i>
+                                &nbsp; &nbsp; +92 (317) - 7294496
+                            </li>
+                            <li>Opening Hours:</li>
+
+                            <li> Monday - Friday</li>
+
+                            <li> 9:30 AM - 18:30 PM (GMT +4)</li>
+
+                            <li> Saturday & Sunday - Closed</li>
+                        </ol>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="mzs">&copy; 2024 MZS Properties. All rights reserved</div>
+    </section>
+
+    <!-- Footer End  -->
+
+    <!-- Bootstrap JS -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
+    <!-- Custom Jquery -->
+    <script src="jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#newsletterForm").submit(function (event) {
+                event.preventDefault();
+
+
+                if (this.checkValidity()) {
+
+                    $("#newsletterThankYouAlert").fadeIn();
+
+
+                    setTimeout(function () {
+                        $("#newsletterThankYouAlert").fadeOut();
+                    }, 8000);
+
+
+                    $(this)[0].reset();
+                } else {
+
+                    $(this).find(':invalid').first().focus().addClass('is-invalid');
+                }
+            });
+
+
+            $("#newsletterForm input").focus(function () {
+                $(this).removeClass('is-invalid');
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,1206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" href="Images\mainlogo.jpg">
+
+    <title>MZS Properties | property-details</title>
+
+    <!-- Font Awesome Library -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap">
+
+    <!-- Bootstrap Css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <!-- Custom Css -->
+    <style>
+        * {
+
+            margin: 0%;
+            padding: 0%;
+            box-sizing: border-box;
+            font-family: "Work Sans", sans-serif;
+        }
+
+        body {
+            margin: 0;
+            font-family: "Work Sans", sans-serif;
+        }
+
+        /* NAV STart  */
+        .navbar-brand {
+            margin-left: 15px;
+        }
+
+        .navbar-toggler-icon {
+            color: #001f3f;
+            background-color: #ffffff;
+
+        }
+
+        .navbar-toggler:focus {
+            outline: none;
+        }
+
+        .navbar-nav .nav-link {
+            padding: 8px 15px;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #F68F16;
+            border-radius: 5px;
+            box-shadow: 0 0 5px #F68F16, 0 0 5px #ffffff;
+        }
+
+        .dropdown-menu {
+            background-color: rgba(0, 31, 63, 0.8);
+        }
+
+        .dropdown-item {
+            color: #ffffff;
+        }
+
+        .dropdown-item:hover {
+            background-color: rgba(0, 31, 63, 0.8);
+            color: #F68F16;
+            border-radius: 5px;
+            box-shadow: 0 0 5px #F68F16, 0 0 5px #ffffff !important;
+
+        }
+
+        .navi {
+            position: fixed;
+            width: 100%;
+            z-index: 999;
+            background-color: #001f3f;
+            padding-top: 0%;
+            padding-bottom: 0%;
+
+        }
+
+        .navi::after {
+            content: '';
+            clear: both;
+            display: table;
+
+        }
+
+        .header {
+            position: relative;
+        }
+
+        .logoimg {
+            position: relative;
+            left: 1%;
+            height: 70px;
+            width: 70px;
+        }
+
+        .navi .ul {
+            /* float: right; */
+            list-style-type: none;
+            margin-right: 0px;
+            margin-bottom: 5px;
+            position: relative;
+
+
+        }
+
+        .navi .ul .li {
+            /* float: left; */
+            display: inline-block;
+            background-color: rgba(0, 31, 63, 0.8);
+            margin: 5px 5px;
+        }
+
+        .navi .ul .li a {
+            color: #ffffff;
+            text-decoration: none;
+            line-height: 18px;
+            font-size: 18px;
+            padding: 8px 15px;
+
+        }
+
+        .navi .ul .li a:hover {
+            color: #F68F16;
+            border-radius: 5px;
+            box-shadow: 0 0 5px #F68F16, #ffffff 0 0 5px;
+
+        }
+
+        .navi .ul .ul .li a:hover {
+            color: #F68F16;
+            box-shadow: 0 0 5px #F68F16, 0 0 5px #ffffff;
+        }
+
+        .dropdown .dropdown-menu {
+            position: absolute;
+            border-top: 3px solid #F68F16;
+            border-bottom: 3px solid #F68F16;
+            top: 55px;
+
+
+            transition: top .5s;
+            margin: 0%;
+            padding: 0%;
+
+        }
+
+        .navbar-toggler-icon {
+            display: block;
+            width: 45px;
+            height: 30px;
+            padding: 5px;
+            background-color: #001f3f;
+            border: none;
+            cursor: pointer;
+        }
+
+        .navbar-toggler-icon::before,
+        .navbar-toggler-icon::after {
+            content: '';
+            display: block;
+            width: 34px;
+            height: 3px;
+            background-color: #ffffff;
+            border-radius: 5px;
+
+        }
+
+        .navbar-toggler-icon::before {
+            margin-bottom: 5px;
+
+        }
+
+        .navbar-toggler-icon::after {
+            margin-top: 10px;
+
+        }
+
+        .navbar-toggler-icon:hover {
+            border-color: #F68F16;
+        }
+
+        .navbar {
+            z-index: 1000;
+
+        }
+
+        /* Nav Bar End */
+
+        /* carousel start */
+        .carouseli {
+            /* height: 80vh; */
+            width: 100%;
+        }
+
+        .carouseli img {
+            height: 100%;
+            width: 100%;
+            height: 100vh;
+            object-fit: cover;
+            overflow: hidden;
+            border: none;
+
+        }
+
+        /* carousel end */
+
+        /* Propsection Start */
+        .propsection {
+            position: relative;
+            top: 40px;
+
+        }
+
+        .propsection .prop1col {
+            margin: auto;
+        }
+
+        .propsection .propdetails {
+            box-shadow: 0 2px 10px 2px #001f3f;
+            padding: 10px 20px;
+            border-radius: 10px;
+            height: 110vh;
+            margin: 20px 5px 20px 20px;
+        }
+
+        .propsection .propdetails h3 {
+            color: rgb(0, 17, 74);
+            padding: 10px;
+            font-weight: 500;
+        }
+
+        .propsection .propdetails p {
+            font-size: 18px;
+            font-weight: 300;
+            padding: 10px;
+        }
+
+        .propsection .propdetails span {
+            color: #F68F16;
+            font-size: 20px;
+            font-weight: 400;
+            padding: 10px;
+
+
+        }
+
+        .propsection .propdetails i {
+            color: rgb(0, 17, 74);
+            padding: 10px;
+        }
+
+        .propsection .propdetails .viewing {
+            padding: 10px;
+            background-color: #F68F16;
+            color: #ffffff;
+            border: 1px solid #F68F16;
+            font-size: 18px;
+            font-weight: 400;
+            border-radius: 5px;
+            width: 100%;
+            cursor: pointer;
+            transition: .5s;
+            margin-bottom: 30px;
+        }
+
+        /* .propsection .propdetails #btn1 a {
+            text-decoration: none;
+            color: #ffffff;
+        } */
+
+        .propsection .propdetails .viewing:hover {
+            background-color: #B2B5BF;
+            border: 1px solid #B2B5BF;
+
+        }
+
+        .propsection .propdetails #btn2 {
+            background-color: transparent;
+            color: #25D366;
+            border: 1.5px solid #25D366;
+            cursor: pointer;
+            font-size: 18px;
+            font-weight: 400;
+            padding: 10px;
+            border-radius: 5px;
+            transition: .5s;
+            margin-bottom: 30px;
+            width: 100%;
+
+
+        }
+
+        .propsection .propdetails #btn2 a {
+            text-decoration: none;
+            color: #25D366;
+
+        }
+
+        .propsection .description h3 {
+            color: #001f3f;
+            margin-top: 30px;
+            padding: 10px 0 10px 30px;
+            font-size: 30px;
+            font-weight: 500;
+        }
+
+        .propsection .description ul {
+            margin-left: 20px;
+
+
+        }
+
+        .propsection .description ul li {
+            padding: 10px;
+        }
+
+        .propsection .description h4 {
+            color: #001f3f;
+            font-size: 30px;
+            font-weight: 400;
+            padding: 10px 0 10px 30px;
+
+        }
+
+        .propsection .description p {
+            padding: 5px 30px;
+            text-align: justify;
+        }
+
+        .propsection .description h6 {
+            padding: 5px 30px;
+            text-align: justify;
+            color: rgb(33, 37, 41);
+            font-size: 16px;
+            font-weight: 400;
+
+
+        }
+
+        /* Form Start  */
+
+        .formsection {
+            display: none;
+            position: absolute;
+            top: 60vh;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            max-width: 80%;
+            padding: 20px;
+            background-color: #001f3f;
+            color: #001f3f;
+            border: none;
+            border-radius: 10px;
+            z-index: 999;
+            transition: .3s;
+        }
+
+        .formsection .namee {
+            width: 100%;
+            border: 1px solid #B2B5BF;
+            padding: 10px;
+            margin: 7px;
+            border-radius: 5px;
+            color: #001f3f;
+
+        }
+
+        .formsection .textarea {
+            color: #001f3f;
+            width: 100%;
+            border: 1px solid #f68f16;
+            padding: 10px;
+            margin: 7px;
+            border-radius: 5px;
+
+        }
+
+        .formsection .btnn {
+            width: 40%;
+            padding: 10px;
+            margin: 10px;
+            background-color: #F68F16;
+            border-radius: 1px solid #f68f16;
+            color: #ffffff;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .formsection .btnn:hover {
+            background-color: #B2B5BF;
+            transition: .3s;
+        }
+
+        .formsection h1 {
+            padding: 10px;
+            margin: 10px;
+            color: #F68F16;
+            text-align: center;
+            font-size: xx-large;
+            font-weight: 500;
+        }
+
+        .formsection select {
+
+            width: 100%;
+            border: 1px solid #B2B5BF;
+            padding: 10px;
+            margin: 7px;
+            border-radius: 5px;
+        }
+
+        #thankYouAlert {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+        }
+
+        #thankYouAlert p {
+            text-align: center;
+            padding: 20px;
+            color: #F68F16;
+            font-size: 23px;
+            font-weight: 500;
+            background-color: #ffffff;
+
+        }
+
+        .closeFormBtn {
+            height: 40px;
+            width: 40px;
+            border: 2px solid #F68F16;
+            color: #F68F16;
+            background-color: #ffffff;
+            position: absolute;
+            top: 20px;
+            right: 25px;
+        }
+
+        /* Form End */
+
+
+
+
+
+
+
+        /* Propsection End */
+
+
+        /* Newsletter section start */
+        .newsletter {
+            height: 40vh;
+            background-color: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 25px 0 35px 0;
+            border-top: 1px solid #B2B5BF;
+        }
+
+        .newsletter h2 {
+            margin-top: 12px;
+            font-size: 28px;
+            font-weight: 500;
+            color: #001f3f;
+            text-align: left;
+            width: 100%;
+            text-align: left;
+
+        }
+
+        .newsletter .name {
+            height: 40px;
+            width: 100%;
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #ffffff;
+            border: 1px solid #E3E5ED;
+            border-radius: 5px;
+
+
+        }
+
+        .newsletter .email {
+            height: 40px;
+            width: 100%;
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #ffffff;
+            border: 1px solid #E3E5ED;
+            border-radius: 5px;
+
+
+        }
+
+        .newsletter .signupbtn {
+            width: 80%;
+            height: 40px;
+            margin-top: 10px;
+            background-color: #F68F16;
+            border: none;
+            border-radius: 5px;
+            color: #ffffff;
+
+
+        }
+
+        .name:hover {
+            border: 2px solid black;
+        }
+
+        .email:hover {
+            border: 2px solid black;
+        }
+
+        .signupbtn:hover {
+            background-color: #B2B5BF;
+            transition: .3s ease;
+        }
+
+        #newsletterThankYouAlert {
+            display: none;
+            position: fixed;
+
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+
+        }
+
+        #newsletterThankYouAlert p {
+            text-align: center;
+            padding: 20px;
+            color: #F68F16;
+            font-size: 28px;
+            font-weight: 500;
+            background-color: #ffffff;
+            width: 100%;
+
+        }
+
+        /* NEWSLETTER SECTION END */
+
+        /* Footer Start */
+        .footer {
+            background-color: #001f3f;
+            position: relative;
+
+        }
+
+        .footer::before {
+            content: '';
+            position: absolute;
+            left: 0%;
+            top: 100px;
+            height: 1px;
+            width: 100%;
+            color: #F68F16;
+        }
+
+        .footer ul {
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            padding-left: 0%;
+
+        }
+
+        .footer ul li {
+            list-style-type: none;
+
+            height: 40px;
+            width: 40px;
+            border-radius: 50%;
+            text-align: center;
+            text-decoration: none;
+            line-height: 40px;
+            cursor: pointer;
+            color: #ffffff;
+            background-color: #F68F16;
+            margin-top: 10px;
+
+        }
+
+        .footer ul li a {
+            text-decoration: none;
+            color: #ffffff;
+        }
+
+        .footer ul .li1:hover {
+            background-color: #4246b2;
+            color: #ffffff;
+            box-shadow: 0 0 15px #F68F16;
+            text-shadow: 0 0 15px #ffffff;
+            transition: .3s;
+
+        }
+
+        .footer ul .li2:hover {
+            background-color: #e1306c;
+            color: #ffffff;
+            box-shadow: 0 0 15px #F68F16;
+            text-shadow: 0 0 15px #ffffff;
+            transition: .3s;
+
+        }
+
+        .footer ul .li3:hover {
+            background-color: #262626;
+            color: #ffffff;
+            box-shadow: 0 0 15px #F68F16;
+            text-shadow: 0 0 15px #ffffff;
+            transition: .3s;
+
+        }
+
+        .footer ul .li4:hover {
+            background-color: #ff0000;
+            color: #ffffff;
+            box-shadow: 0 0 15px #F68F16;
+            text-shadow: 0 0 15px #ffffff;
+            transition: .3s;
+
+        }
+
+        .footer ol {
+            color: #ffffff;
+            padding: 0%;
+            margin-bottom: 20px;
+        }
+
+        .footer p {
+            color: #F68F16;
+            font-size: 20px;
+            font-weight: 500;
+            text-align: center;
+            margin-top: 30px;
+
+        }
+
+        .footer ol li {
+            list-style-type: none;
+            margin: 10px 0 10px 0;
+            text-align: center;
+            font-size: 16px;
+            font-weight: 400;
+            cursor: pointer;
+
+            padding: 0%;
+        }
+
+        .footer ol li a {
+            text-decoration: none;
+            color: #ffffff;
+        }
+
+        .footer ol li a:hover {
+            color: #65BAF3;
+            transition: .3s;
+
+        }
+
+        .footer ol li:hover {
+            color: #65BAF3;
+            transition: .3s;
+        }
+
+        .footer h1 img {
+            margin-right: 15px;
+            height: 80px;
+            width: 80px;
+        }
+
+        .footer h1 {
+            color: #F68F16;
+            font-size: 30px;
+            font-weight: 700;
+            text-align: left;
+            padding: 1% 1% 1% 3%;
+            margin-top: 30px;
+        }
+
+        .footer .term li {
+            text-align: left;
+            list-style-type: none;
+            margin: 10px 0 10px 0;
+
+            font-size: 16px;
+            font-weight: 400;
+            cursor: pointer;
+
+            padding: 1% 0.5% 0 4%;
+        }
+
+        .footer .company {
+            margin-top: 50px;
+
+        }
+
+        .footer .company li {
+
+            text-align: right;
+            padding: 1% 12% 0 0;
+            cursor: text;
+        }
+
+        .footer .company li:hover {
+            color: #ffffff;
+        }
+
+        .footer .mzs {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 60px;
+            font-size: 20px;
+            font-weight: 500;
+            font-family: "Work Sans", sans-serif;
+            color: #ffffff;
+            border-top: 1px solid #F68F16;
+            background-color: #001f3f;
+        }
+
+        /* Footert End */
+    </style>
+
+</head>
+
+<body>
+
+    <header class="header">
+
+        <!-- NAV BAR START -->
+
+        <nav class="navbar navbar-expand-lg navi">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#"><img class="logoimg" src="Images\mainlogo.jpg" alt="logo"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+
+                </button>
+
+                <div class="collapse navbar-collapse " id="navbarSupportedContent">
+
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 ul">
+                        <li class="nav-item li">
+                            <a class="nav-link " href="buy.html">Buy</a>
+                        </li>
+                        <li class="nav-item li">
+                            <a class="nav-link" href="rent.html">Rent</a>
+                        </li>
+                        <li class="nav-item li">
+                            <a class="nav-link" href="sell.html">Sell</a>
+                        </li>
+                        <li class="nav-item dropdown li">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Areas
+                            </a>
+                            <ul class="dropdown-menu ul">
+                                <li><a class="dropdown-item" href="propertydetails.html">DownTown Dubai</a></li>
+                                <li><a class="dropdown-item" href="propertydetails.html">Palm Jumeirah</a></li>
+                                <li><a class="dropdown-item" href="propertydetails.html">Bluewaters</a></li>
+                                <li><a class="dropdown-item" href="propertydetails.html">Business Bay</a></li>
+                                <li><a class="dropdown-item" href="propertydetails.html">Dubai Marina</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown li">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Projects
+                            </a>
+                            <ul class="dropdown-menu ul">
+                                <li><a class="dropdown-item" href="propertydetails.html">Apartments</a></li>
+                                <li><a class="dropdown-item" href="propertydetails.html">Townhouses</a></li>
+                                <li><a class="dropdown-item" href="propertydetails.html">Penthouses</a></li>
+                                <li><a class="dropdown-item" href="propertydetails.html">Villas</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown li">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Commercial
+                            </a>
+                            <ul class="dropdown-menu ul">
+                                <li><a class="dropdown-item" href="propertydetails.html">Commercial for sale in
+                                        Dubai</a></li>
+                                <li><a class="dropdown-item" href="propertydetails.html">Commercial for rent in
+                                        Dubai</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item li">
+                            <a class="nav-link" href="contactus.html">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- NAV BAR END -->
+
+        <!-- Carousel Start -->
+
+        <div id="carouselExampleAutoplaying" class="carousel slide carouseli" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="Images\propertyimg1.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="Images\propertyimg2.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="Images\propertyimg3.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="Images\propertyimg4.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="Images\propertyimg5.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="Images\propertyimg6.jpg" class="d-block w-100" alt="...">
+                </div>
+
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+        <!-- Carousel End -->
+
+        <section class="propsection">
+            <div class="container-fluid">
+                <div class="row">
+
+                    <div class="col col-lg-5 col-md-6 col-sm-11 col-11 propdetails">
+                        <h3>Vida Rasidences Dubai Marina, Dubai Marina</h3>
+                        <p>2 Bedroom apartment for sale</p>
+                        <span>AED 2,700,000</span>
+                        <br>
+                        <br>
+                        <div class="row">
+                            <div class=" col col-md-4 col-sm-4 col-4">
+                                <i class="fas fa-bed"></i>&nbsp; 2
+                            </div>
+                            <div class="col col-md-4 col-sm-4 col-4">
+                                <i class=" fas fa-shower"> </i> 2
+                            </div>
+
+                            <div class="col col-md-4 col-sm-4 col-4">
+                                <i class="fas fa-search"></i> 1187
+                            </div>
+                        </div>
+                        <p>Ref.No : DCH232794<br><br>
+                            Permit No : 71276112734</p>
+
+                        <div class="row">
+                            <div class="col col-lg-6 col-md-12 col-sm-12 col-12">
+                                <button class="viewing" id="showBookingFormBtn">Book a Viewing</button>
+                            </div>
+
+                            <!-- Form Start  -->
+                            <section class="formsection" id="formSection" style="display: none;">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col col-lg-12">
+                                            <button class="closeFormBtn" id="closeFormBtn"><a>&times;</a></button>
+                                            <h1>Book a Viewing</h1>
+                                        </div>
+                                        <!-- Your form fields here -->
+                                        <form id="callbackForm">
+                                            <div class="col col-lg-12">
+                                                <input class="namee" type="text" name="yourname"
+                                                    placeholder="Your Name *" required>
+                                            </div>
+                                            <div class="col col-lg-12">
+                                                <input class="namee" type="email" name="youremail"
+                                                    placeholder="Your Email *" required>
+                                            </div>
+                                            <div class="col col-lg-12">
+                                                <input class="namee" type="tel" name="yourphone"
+                                                    placeholder="Your Phone Number *" required>
+                                            </div>
+                                            <div class="col col-lg-12">
+                                                <input class="namee" type="datetime-local" name="selecttime&date"
+                                                    required>
+                                            </div>
+                                            <div class="col col-lg-12">
+                                                <select name="selectinquirytype" required>
+                                                    <option value="" disabled selected>Select Inquiry Type *</option>
+                                                    <option value="viewings">Viewings</option>
+                                                    <option value="valuations">Valuations</option>
+                                                    <option value="consultation">Consultation</option>
+                                                    <option value="propertymanagement">Property Management</option>
+                                                    <option value="others">Others</option>
+                                                </select>
+                                            </div>
+                                            <div class="col col-lg-12">
+                                                <textarea class="textarea" rows="3" name="addinyournotes"
+                                                    placeholder="Add Your Notes *" required></textarea>
+                                            </div>
+                                            <div class="col col-lg-12">
+                                                <button class="btnn" type="submit" name="submit">Submit</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </section>
+                            <!-- Form End  -->
+
+                            <!-- <- Thanks Alert Start -->
+
+                            <div id="thankYouAlert" style="display: none;">
+                                <p>Thank you for considering us for your real estate needs! Our experts are eager to
+                                    guide you through every step of the process. Expect a call from us soon.</p>
+                            </div>
+                            <!-- Thanks Alert End -->
+
+
+                            <div class="col col-lg-4  col-md-12 col-sm-12 col-12">
+                                <button id="btn2" type="button" name="whatsapp"><a href="#">WhatsApp</a></button>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="col col-lg-6 col-md-5 col-sm-12 col-12 description">
+                        <h3> Key Features</h3>
+                        <ul type="Circle">
+                            <li>2 Bedrooms</li>
+                            <li> BUA: 1,187 sqft</li>
+                            <li>Burj Khalifa view</li>
+                            <li> Vacant and available now</li>
+                            <li> Great community and facilities</li>
+
+                            <li>Large open plan apartment</li>
+                            <li> Floor to ceiling windows</li>
+                            <li>Large balconies</li>
+                            <li>Contact Agent on +92-317-7294496</li>
+                        </ul>
+                        <hr>
+                        <h4> Description</h4>
+                        <p> Dacha Real Estate is delighted to offer this serene 2-Bedroom Apartment in Vida Residences
+                            Dubai Marina</p>
+
+
+                        <p> Experience coastal elegance in this 2-bedroom haven at Vida Residences Creek Beach.</p>
+
+                        <p> Enjoy modern living with scenic creek and skyline views.</p>
+
+                        <p>Step into a world of comfort with spacious living areas and a sleek kitchen.</p>
+
+                        <p> Retreat to bedrooms offering tranquil creek views and the city's vibrant energy.</p>
+
+                        <p> Located in Dubai's heart, this apartment blends luxury living with urban convenience. Don't
+                            miss owning this slice of paradise.</p>
+
+                        <p>To register your interest or arrange a viewing, please contact me on +92-317-7294496.
+                        </p>
+                        <h6> For further information please contact our head office on +92 (317) 7294496, alternatively
+                            visit www.mzsproperties.ae where you will find an extensive selection of properties
+                            available for
+                            sale and for rent.</h6>
+                        <br>
+                        <br>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+        </section>
+
+        <!-- Prop section End -->
+
+        <!-- NEWSLETTER SECTION START -->
+        <section class="newsletter">
+            <div class="container-fluid">
+                <form id="newsletterForm">
+                    <div class="row newsrow">
+                        <div class="col col-lg-4 col-md-4 col-sm-12 col-12">
+                            <h2>Subscribe for newsletter</h2>
+                        </div>
+                        <div class="col col-lg-3 col-md-3 col-sm-12 col-12">
+                            <input class="name" type="text" placeholder="Enter your full name" name="name" required>
+                            <div class="invalid-feedback">Please enter your full name.</div>
+                        </div>
+                        <div class="col col-lg-3 col-md-3 col-sm-12 col-12">
+                            <input class="email" type="email" placeholder="Enter your email" name="email" required>
+                            <div class="invalid-feedback">Please enter a valid email address.</div>
+                        </div>
+                        <div class="col col-md-2 col-lg-2 col-sm-6 col-6">
+                            <button class="signupbtn" type="submit">Subscribe</button>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+            <!-- thank you message start -->
+            <div id="newsletterThankYouAlert" style="display: none;">
+                <p>Thank you for subscribing to our newsletter!</p>
+            </div>
+            <!-- thank you message End -->
+
+        </section>
+        <!-- NEWSLETTER SECTION END -->
+
+        <!-- Footer start -->
+        <section class="footer">
+            <div class="container-fluid">
+                <div class="row ">
+                    <div class="col col-lg-3 col-md-3 col-sm-6 col-6">
+                        <p>Properties for Sale in Dubai</p>
+                        <ol>
+                            <li><a>Apartments for sale</a></li>
+                            <li><a>Townhouses for sale</a></li>
+                            <li><a>Penthouses for sale</a></li>
+                            <li><a>Villas for sale</a></li>
+
+                        </ol>
+
+                    </div>
+
+                    <div class="col col-lg-3 col-md-3 col-sm-6 col-6">
+                        <p>Properties for Rent in Dubai</p>
+                        <ol>
+                            <li><a>Apartments for rent</a></li>
+                            <li><a>Townhouses for rent</a></li>
+                            <li><a>Penthouses for rent</a></li>
+                            <li><a>Villas for rent</a></li>
+                        </ol>
+                    </div>
+                    <div class="col col-lg-2 col-md-2 col-sm-6 col-6 ">
+                        <p> Sell </p>
+                        <ol>
+                            <li><a>Sell your property</a></li>
+                            <li><a>Seller's Guide</a></li>
+
+
+                        </ol>
+                    </div>
+                    <div class="col col-md-4 col-sm-6 col-xs-6 col-6">
+                        <p>Follow Us</p>
+                        <ul>
+                            <li class="li1"><a href="https://www.facebook.com/SubhanMZS?mibextid=ZbWKwL"
+                                    target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                            <li class="li2"><a
+                                    href="https://www.instagram.com/itx_subhan_3428?igsh=MWowNTA3eGkxaG5mMA=="
+                                    target="_blank"><i class="fab fa-instagram"></i></a></li>
+                            <li class="li3"><a href="https://www.tiktok.com/@itx_subhan_3428?_t=8kFjsdTKlWr&_r=1"
+                                    target="_blank"><i class="fab fa-tiktok"></i></a></li>
+                            <li class="li4"><a href="https://youtube.com/@subhanprops?si=L_4xsvAVDJ6b7AIi"
+                                    target="_blank"><i class="fab fa-youtube"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+
+
+
+                <div class="row ">
+                    <div class=" col col-md-6 col-lg-6 col-sm-6 col-6">
+                        <h1>MZS Properties</h1>
+
+                        <div class="term">
+                            <ol>
+                                <li class="Privacy"><a href="contactus.html" target="_blank">Contact Us</a></li>
+                                <li class="Privacy"><a href="aboutus.html" target="_blank">About Us</a></li>
+                                <li class="Privacy"><a href="privacypolicy.html" target="_blank">Privacy Policy</a>
+                                </li>
+                                <li class="Privacy"><a href="terms&conditon.html">Terms & Conditions</a></li>
+
+
+                            </ol>
+                        </div>
+                    </div>
+                    <div class="col col-md-6 col-lg-6 col-sm-6 col-6">
+                        <div class="company">
+                            <ol>
+                                <li><i class="fas fa-mobile-alt"></i>
+                                    &nbsp; &nbsp; +92 (317) - 7294496
+                                </li>
+                                <li>Opening Hours:</li>
+
+                                <li> Monday - Friday</li>
+
+                                <li> 9:30 AM - 18:30 PM (GMT +4)</li>
+
+                                <li> Saturday & Sunday - Closed</li>
+                            </ol>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="mzs">&copy; 2024 MZS Properties. All rights reserved</div>
+        </section>
+
+        <!-- Footer End  -->
+
+
+        <!-- Bootstrap JS -->
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+            crossorigin="anonymous"></script>
+
+        <!-- Custom Jquery -->
+        <script src="jquery-3.7.1.min.js"></script>
+        <script>
+
+            $(document).ready(function () {
+                $("#showFormBtn").click(function () {
+                    $("#formSection").show();
+                });
+
+                $("#showBookingFormBtn").click(function () {
+                    $("#formSection").show();
+                });
+
+                $("#closeFormBtn").click(function () {
+                    $("#formSection").fadeOut();
+                });
+
+                $("#callbackForm").submit(function (event) {
+                    event.preventDefault(); // Prevent default form submission
+
+                    // Perform client-side validation if needed
+                    // For simplicity, let's assume validation always passes
+
+                    // Display thank you alert
+                    $("#thankYouAlert").fadeIn();
+
+                    // Hide the thank you alert after 8 seconds
+                    setTimeout(function () {
+                        $("#thankYouAlert").fadeOut();
+                    }, 8000);
+
+                    // Optionally, reset the form fields
+                    $(this)[0].reset();
+
+                    // Hide the form
+                    $("#formSection").fadeOut();
+                });
+            });
+
+
+
+
+            $(document).ready(function () {
+                $("#newsletterForm").submit(function (event) {
+                    event.preventDefault();
+
+
+                    if (this.checkValidity()) {
+
+                        $("#newsletterThankYouAlert").fadeIn();
+
+
+                        setTimeout(function () {
+                            $("#newsletterThankYouAlert").fadeOut();
+                        }, 8000);
+
+
+                        $(this)[0].reset();
+                    } else {
+
+                        $(this).find(':invalid').first().focus().addClass('is-invalid');
+                    }
+                });
+
+
+                $("#newsletterForm input").focus(function () {
+                    $(this).removeClass('is-invalid');
+                });
+            });
+        </script>
+</body>
+
+</html>
